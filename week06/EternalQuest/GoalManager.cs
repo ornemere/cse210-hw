@@ -9,7 +9,7 @@ class GoalManager
     public void DisplayMenu()
     {
         Console.WriteLine("Eternal Quest Menu (stub)");
-        // menu logic will go here
+
     }
 
     public void CreateGoal() { }
