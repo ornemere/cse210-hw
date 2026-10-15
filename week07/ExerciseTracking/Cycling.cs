@@ -1,0 +1,36 @@
+using System;
+
+public class Cycling : Activity
+{
+    private double _speed;
+
+    public Cycling(DateTime date, int length, double speed) : base(date, length)
+    {
+        _speed = speed;
+    }
+
+    public override string GetActivityName()
+    {
+        return "Cycling";
+    }
+
+    public override double GetDistance()
+    {
+        return _speed * GetLength() / 60.0;
+    }
+
+    public override double GetSpeed()
+    {
+        return _speed;
+    }
+
+    public override double GetPace()
+    {
+        if (_speed <= 0)
+        {
+            return 0;
+        }
+
+        return 60.0 / _speed;
+    }
+}
